@@ -1,0 +1,28 @@
+
+
+
+    
+   <table class="table table-responsive table-bordered table-striped table-hover">
+                        <thead>
+                        <tr>
+                        <th ><a href="#/results" ng-click="sortType = 'name'; sortReverse = !sortReverse">Character Name
+                            <i class="fa fa-fw fa-sort"></i></a>  
+                        </th>
+                        <th>Played By   
+                        </th>
+                        <th>Details</th> 
+                        </tr>
+                        </thead>
+                        <tbody >
+                           
+                        <tr ng-repeat="chartr in myMatch.characters| orderBy:sortType:sortReverse| filter:selectedText" ng-if="chartr.name">
+                        <td style="width: 33%">{{chartr.name}}</td>    
+                        <td style="width: 33%" ng-repeat="played in chartr.playedBy">{{played}}
+                        </td>
+                        <td style="width: 33%"><button class="btn btn-info" ng-click="single.character(chartr.url)">Details</button></td>
+                        </tr>
+                           
+                        </tbody>
+</table>
+   
+ 

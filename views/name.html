@@ -1,0 +1,39 @@
+
+
+<div class="container" style="margin-top: 100px" > 
+
+    
+<h2 style="text-align: center">{{single.name}}</h2> 
+    
+
+    
+<div id="about" class="text">
+      <div class="container">
+          
+      <div class="col-md-5" >
+            <p><img src="./img/gotbook.jpg" alt="" class="img-responsive"></p>
+      </div>
+          
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2">
+              <p class="lead " ><b>ISBN</b> : {{single.isbn}}</p>
+              <p class="lead "><b>Authors</b> :</p>
+              <p class="lead " ng-repeat="auth in single.authors">{{auth}}</p>  
+              <p class="lead "><b>Number Of Pages</b> : {{single.numberOfPages}}</p>
+              <p class="lead "><b>Publisher</b> : {{single.publisher}}</p>
+              <p class="lead "><b>Country</b> : {{single.country}}</p> 
+              <p class="lead "><b>Released Date</b> : {{single.released|date}}</p>   
+          </div>
+        </div>
+          <p class="lead" style="text-decoration: underline"><b>Characters</b> : </p>
+          <div ng-repeat="ch in single.characters"> 
+              <div class="col-md-4"><single-char baseurl={{ch}}></single-char></div>
+          </div>  
+          
+      </div>
+</div> 
+    
+</div>    
+    
+    
+    

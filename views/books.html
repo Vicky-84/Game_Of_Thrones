@@ -1,0 +1,28 @@
+
+<table class="table table-responsive  table-bordered table-striped table-hover">
+                        <thead>
+                        <tr>
+                        <th> <a href="#/results" ng-click="sortType = 'name'; sortReverse = !sortReverse">Book Name
+                            <i class="fa fa-fw fa-sort"></i></a>   
+                        </th>
+                        <th >Written By
+                        </th>
+                        <th>Details</th>    
+                        </tr>
+                        </thead>
+                        <tbody >
+                        <tr ng-repeat="book in myMatch.books| orderBy:sortType:sortReverse| filter: selectedText ">
+                        <td style="width: 33%">{{book.name}}</td>    
+                        <td style="width: 33%" >{{book.authors[0]}}
+                        </td>
+                        <td style="width: 33%"><button class="btn btn-info" ng-click="single.saveRecipe(book.url)">Details</button></td>
+                        </tr>
+                        </tbody>
+</table>  
+
+
+    
+    
+
+
+

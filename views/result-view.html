@@ -1,0 +1,54 @@
+<div class="container" style="margin-top: 100px" > 
+    
+        <div  ng-init="myMatch.loadAllBooks();myMatch.loadAllHouse();myMatch.loadAllCharacter()" ng-controller="recipeCtrl as single" >
+            
+            
+        <input type="text" name="search" ng-model="selectedText" placeholder="Search Books,Characters Or Houses">
+            
+        <br><br>    
+                        
+                
+        <!--Results Table-->
+                <div >
+                <h2 style="text-align: center">Books</h2>     
+                        
+                <div style="background-color:beige">                          
+                    
+                    <my-books></my-books>  
+                    
+                </div>
+                </div>    
+               
+                
+                
+                
+                
+                <div >
+                <h2 style="text-align: center">Characters</h2>  
+                
+                <div style="background-color:burlywood" >                          
+                    <my-character></my-character>  
+                </div>
+                </div>    
+                
+                
+                
+                
+                
+                <div >
+                <h2 style="text-align: center">Houses</h2>
+                
+                <div style="background-color:darksalmon">                          
+                    <my-houses></my-houses>  
+                </div>
+                    
+                </div>
+                  
+                  
+            </div> 
+    </div>    
+                    
+          
+     <!--Results Table End-->
+
+    

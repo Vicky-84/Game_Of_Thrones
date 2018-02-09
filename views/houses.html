@@ -1,0 +1,23 @@
+
+
+<table class="table table-responsive table-bordered table-striped table-hover">
+                        <thead>
+                        <tr>
+                        <th ><a href="#/results" ng-click="sortType = 'name'; sortReverse = !sortReverse">House Name 
+                            <i class="fa fa-fw fa-sort"></i></a>    
+                        </th>
+                        <th>Region   
+                        </th>
+                        <th>Details</th> 
+                        </tr>
+                        </thead>
+                        <tbody >
+                        <tr ng-repeat="house in myMatch.houses| orderBy:sortType:sortReverse| filter: selectedText">
+                        <td style="width: 33%">{{house.name}} </td>      
+                        <td style="width: 33%">{{house.region}} </td>    
+                        <td style="width: 33%"><button class="btn btn-info" ng-click="single.houses(house.url)">Details</button></td>
+                        </tr>
+                        </tbody>
+</table>    
+
+
